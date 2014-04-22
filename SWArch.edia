@@ -1,0 +1,14 @@
+diagram "SW Stack" =
+    twoStackedBoxes name =
+        vlayout
+            box "App" h=10%
+            box $name
+    
+    apps = map twoStackedBoxes ["Abc" "Def" "Ghijk" "Lmno"]
+    
+    vlayout
+        hlayout EqualSpacing CenterContents
+            apps
+        vlayout CenterContents
+            box "Interface" h=10%
+            box "Service Provider"
